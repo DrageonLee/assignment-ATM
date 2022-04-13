@@ -1,3 +1,4 @@
+
 user = []
 
 class Account:
@@ -12,7 +13,6 @@ class Account:
         else : 
             print("Same user is enrolled")
     def checkAccount(self):
-        # print(self.account)
         print(self.name)
         self.account_list = list(i for i in filter(lambda x : x['name'] == self.name, user))
         if 'Account' not in self.account_list[0].keys():
@@ -136,54 +136,46 @@ class Operate:
                     for y in i['Account']:
                         if y['ID'] == self.choice:
                             y['Balance'] = result
-        # print(Account.user)
         return f'Balance : {result}'
-# class ATM :
-#     def __init__(self):
-#         self.PIN = PIN
-ATM = Account()
-# ATM1 = Account()
-print(ATM.checkAccount())
-print(ATM.addAccount())
+
+# ATM = Account()
+# print(ATM.checkAccount())
+# print(ATM.addAccount())
+
+# operate = Operate().insertCard()
+# print(operate)
+# operate1 = Operate().insertCard()
+# print(operate1)
+
 # print(user)
-# ATM1 = Account()
-# print(ATM1.checkAccount())
-# print(user)
-# .checkAccount())
 
-operate = Operate().insertCard()
-print(operate)
-operate1 = Operate().insertCard()
-print(operate1)
+# def tmp():
+#     name = 'drageon'
+#     Account().__init__.name = 'drageon'
+# print(tmp())
 
-print(user)
+# import unittest
+# from unittest import mock
 
 
-# print(account1.addAccount())
-# print(account1.addAccount())
+# class UnitTest(unittest.TestCase):
+#     def setUp(self):
+#         self.user = []
+
+#     def tearDown(self):
+#         self.user = None
+    
+#     @mock.patch('builtins.input', side_effect = ['drageon', 1234])
+#     def set_user(self, input):
+#         # self.user = self.user
+#         # mock_input.side_effect = ['drageon', 1234]
+#         Account()
+#         self.assertEqual(test, 1)
+    
+#     # def test(self):
+#     #     self.test = 1
+#     #     self.assertEqual(self.test, 1)
 
 
-# account2 = Account()
-# account2.checkAccount()
-
-
-
-# ATM_operation = Operate()
-# print(ATM_operation.insertCard())
-# print(ATM_operation.insertCard())
-# account1.addAccount()
-# print(account1.addAccount())
-
-# print(Operate())
-# print(account1.checkAccount())
-
-# dic = [{'a' : 1}, {'b' : 2}]
-# for index, i in enumerate(dic):
-#     print(index, i)
-
-# a = [{'name' : 'abcd', 'age' : 30, 'account' : [{'ID' : '0', 'Balance' : 12565413}, {'ID' : '1', 'Balance ': 12341115}]}], {'name' : 'bcde', 'age' : 25}]
-
-# list(i for i in filter(lambda x : x['name'] == 'abcd', a))[0]
-
-# a = {}
-# print(bool(a))
+# if __name__ == '__main__':
+#     unittest.main()
