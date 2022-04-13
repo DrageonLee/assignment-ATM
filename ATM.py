@@ -50,6 +50,7 @@ class Operate:
     When insert Card, type the name and PIN number for checking whether the user is enrolled user or not.
     '''
     def insertCard(self):
+        print('========= ATM controller start =========')
         name = input("Input your name : ")
         self.name = name
         user_name_list = list(i['name'] for i in self.user_list)
@@ -58,8 +59,6 @@ class Operate:
         '''
         if name in user_name_list:
             PIN = int(input('Please input your PIN : '))
-            print(PIN)
-            print(name)
             if PIN == list(i['PIN'] for i in filter(lambda x : x['name'] == name, self.user_list))[0]:
                 return self.selectAccount()
             else : 
@@ -74,9 +73,10 @@ class Operate:
     #Select the accounts with number
     def selectAccount(self):
         account_list = list(i['Account'] for i in filter(lambda x : x['name'] == self.name, self.user_list))[0]
+        print(account_list)
         self.choice = int(input('Select the account : '))
 
-        print(list(i['ID'] for i in account_list))
+        # print(list(i['ID'] for i in account_list))
         if self.choice in list(i['ID'] for i in account_list):
             self.selected_account = list(filter(lambda x : x['ID'] == self.choice, account_list))[0]
         next = int(input("What is next? \n 1. Balance \n 2. Deposit \n 3. Withdraw \n 4. Done \n"))
@@ -105,7 +105,7 @@ class Operate:
                 for y in i['Account']:
                     if y['ID'] == self.choice:
                         y['Balance'] = result
-        return result
+        return f'Balance : {result}'
     
     #Withdraw money
     def Withdraw(self, money):
@@ -130,3 +130,10 @@ user_1 = Account()
 print(user_1.checkAccount())
 print(user_1.addAccount())
 print(user_1.checkAccount())
+
+operate = Operate()
+print(operate.insertCard())
+operate1 = Operate()
+print(operate1.insertCard())
+
+print(user)

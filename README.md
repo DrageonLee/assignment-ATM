@@ -44,8 +44,34 @@ python ATM.py
 ````python
 #create user
 user_1 = Account()
+#create the account for user who use first.
+print(user_1.checkAccount())
+#Add new account for existed user.
+print(user_1.addAccount())
 ````
 ![](https://velog.velcdn.com/images/yg910524/post/dbe2d40d-d10e-48b8-aab2-2a1c743a1551/image.png)
+![](https://velog.velcdn.com/images/yg910524/post/91d9fbf5-f274-44cc-b153-92f1f111f7b6/image.png)
 
+- With created accounts, operate ATM process
+````python
+#Check the user whether verified user or not with name and PIN number.
+operate = Operate()
+print(operate.insertCard())
+#If the user is verified, go to select the account.
+#And then select the operation.
+#If the choice is 1. return 'Balance'
+````
+![](https://velog.velcdn.com/images/yg910524/post/a74ff98e-a7cf-4fa8-9101-a86c53999458/image.png)
 
-4. 
+````python
+#To compare the amount of balance, add one more instance.
+operate1 = Operate()
+print(operate1.insertCard())
+````
+- If the choice is 2.'Deposit', then 'Balance' with deposit money.
+![](https://velog.velcdn.com/images/yg910524/post/76e11b07-5cfd-4ae6-9455-03e3934a51ce/image.png)
+
+- If the choice is 3.'Withdraw', then 'Balance' with withdraw money. In case that withdraw money is more than balance, print('check again') and input the money again.
+![](https://velog.velcdn.com/images/yg910524/post/78ddc1ff-5c43-41f5-ba9e-72f2d5689387/image.png)
+
+![](https://velog.velcdn.com/images/yg910524/post/ef6703e6-81b7-448e-b759-a60e2153a9b4/image.png)
