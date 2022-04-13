@@ -16,6 +16,21 @@ Insert Card => PIN number => Select Account => See Balance/Deposit/Withdraw
 <h2>What I did in this assignment</h2>
 
 1. Can add user account
-```python
 
-```
+2. Check user account and add account
+
+3. There are 4 steps for InsertCard/Checking name and PIN number/SelectAccount
+  - In insertcard processing, input name and PIN number.
+  - With the name and PIN number, check the name and PIN number with user information.
+  - If the user is verified, can select the account.
+  - Can do checking balance/operation of Deposit/opration of Withdraw
+
+<h2>How to do?</h2>
+1. Clone the project.
+  ```bash
+    git clone https://github.com/DrageonLee/assignment-ATM.git
+    ```
+2. Start the file.
+  ```bash
+    python ATM.py
+    ```
