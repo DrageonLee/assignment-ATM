@@ -1,4 +1,3 @@
-
 user = []
 
 class Account:
@@ -13,12 +12,9 @@ class Account:
         else : 
             print("Same user is enrolled")
     def checkAccount(self):
-        print(self.name)
         self.account_list = list(i for i in filter(lambda x : x['name'] == self.name, user))
         if 'Account' not in self.account_list[0].keys():
             self.account_list[0]['Account'] = []
-        # print(self.account_list)
-        # print(self.account_list)
         if bool(self.account_list[0]['Account']) == False:
             print("There is not account.")
             answer = input("Do you want to resister? [Y/N]")
@@ -29,41 +25,24 @@ class Account:
         else :
             return self.account_list
     def addAccount(self) :
-        # print(1)
         self.ID = 0
-        # print(self.account)
-        # print(self.account_list)
+
         if len(self.account_list[0]['Account']) != 0:
-        
-        # for i in self.account_list[0]:
-            # print(self.account_list)
-            # if i['ID'] in self.account_list[0].values():
             self.ID = self.account_list[0]['Account'][-1]['ID'] + 1
         self.account_list[0]['Account'].append({'ID' : self.ID, 'Balance' : 0})
-        # self.account['ID'] = self.ID
-        # self.account['Balance'] = 0
-        # self.user.append(self.name)
-        # print(self.user)
         return f'New account was added. Account list : {self.account_list[0]}'
 
 class Operate:
     def __init__(self):
-    #     # print(user, 1234)
         self.user_list = user
     def insertCard(self):
-        # self.user_list = user
-
-#         # print(self.name)
         name = input("Input your name : ")
         self.name = name
-#         print(self.name)
-#         # super().__init__(self.name, self.PIN)
         user_name_list = list(i['name'] for i in self.user_list)
         if name in user_name_list:
             PIN = int(input('Please input your PIN : '))
             print(PIN)
             print(name)
-            # print(list(i['PIN'] for i in filter(lambda x : x['name'] == name, self.user_list))[0])
             if PIN == list(i['PIN'] for i in filter(lambda x : x['name'] == name, self.user_list))[0]:
                 return self.selectAccount()
             else : 
@@ -77,9 +56,7 @@ class Operate:
     def selectAccount(self):
         account_list = list(i['Account'] for i in filter(lambda x : x['name'] == self.name, self.user_list))[0]
         print(account_list)
-        # print(key for key in account_list.items())
         self.choice = int(input('Select the account : '))
-        # self.choice = choice
 
         print(list(i['ID'] for i in account_list))
         if self.choice in list(i['ID'] for i in account_list):
@@ -88,8 +65,6 @@ class Operate:
             self.selected_account = list(filter(lambda x : x['ID'] == self.choice, account_list))[0]
             print(12345)
             print(self.selected_account)
-            # return self.selected_account, self.Balance()
-            # return self.Balance()
         next = int(input("What is next? \n 1. Balance \n 2. Deposit \n 3. Withdraw \n 4. Done \n"))
         if next == 1 :
             return self.Balance()
@@ -101,10 +76,7 @@ class Operate:
             return self.Withdraw(money)
         elif next == 4 :
             return 'Thank you for using'
-#             print(choice)
-#             return self.balance(choice)
-#     def balance(self):
-#         return self.account
+
     def Balance(self) : 
         return self.selected_account
     
@@ -117,10 +89,8 @@ class Operate:
                 for y in i['Account']:
                     if y['ID'] == self.choice:
                         y['Balance'] = result
-        print(user)
         return result
-        # name = self.name
-        # balance = list(i['Account'] for i in filter(lambda x : x['name'] == name , Account.user))[0]
+
     def Withdraw(self, money):
         name = self.name
         balance = self.selected_account
@@ -137,45 +107,3 @@ class Operate:
                         if y['ID'] == self.choice:
                             y['Balance'] = result
         return f'Balance : {result}'
-
-# ATM = Account()
-# print(ATM.checkAccount())
-# print(ATM.addAccount())
-
-# operate = Operate().insertCard()
-# print(operate)
-# operate1 = Operate().insertCard()
-# print(operate1)
-
-# print(user)
-
-# def tmp():
-#     name = 'drageon'
-#     Account().__init__.name = 'drageon'
-# print(tmp())
-
-# import unittest
-# from unittest import mock
-
-
-# class UnitTest(unittest.TestCase):
-#     def setUp(self):
-#         self.user = []
-
-#     def tearDown(self):
-#         self.user = None
-    
-#     @mock.patch('builtins.input', side_effect = ['drageon', 1234])
-#     def set_user(self, input):
-#         # self.user = self.user
-#         # mock_input.side_effect = ['drageon', 1234]
-#         Account()
-#         self.assertEqual(test, 1)
-    
-#     # def test(self):
-#     #     self.test = 1
-#     #     self.assertEqual(self.test, 1)
-
-
-# if __name__ == '__main__':
-#     unittest.main()
