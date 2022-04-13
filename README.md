@@ -38,7 +38,7 @@ git clone https://github.com/DrageonLee/assignment-ATM.git
 python ATM.py
 ````
 
-3. Process
+3. Process with example case
 - Create account. During this step type name and PIN number
 ````python
 #create user
