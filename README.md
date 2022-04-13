@@ -39,8 +39,7 @@ python ATM.py
 ````
 
 3. Process
-1) Create account
-- During this step type name and PIN number
+- Create account. During this step type name and PIN number
 ````python
 #create user
 user_1 = Account()
