@@ -125,3 +125,8 @@ class Operate:
                         if y['ID'] == self.choice:
                             y['Balance'] = result
         return f'Balance : {result}'
+
+user_1 = Account()
+print(user_1.checkAccount())
+print(user_1.addAccount())
+print(user_1.checkAccount())

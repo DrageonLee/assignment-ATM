@@ -26,6 +26,7 @@ Insert Card => PIN number => Select Account => See Balance/Deposit/Withdraw
   - Can do checking balance/operation of Deposit/opration of Withdraw
 
 <h2>How to do?</h2>
+
 1. Clone the project.
 
 ````bash
@@ -36,3 +37,15 @@ git clone https://github.com/DrageonLee/assignment-ATM.git
 ````bash
 python ATM.py
 ````
+
+3. Process
+1) Create account
+- During this step type name and PIN number
+````python
+#create user
+user_1 = Account()
+````
+![](https://velog.velcdn.com/images/yg910524/post/dbe2d40d-d10e-48b8-aab2-2a1c743a1551/image.png)
+
+
+4. 
