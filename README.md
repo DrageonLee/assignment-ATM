@@ -27,10 +27,10 @@ Insert Card => PIN number => Select Account => See Balance/Deposit/Withdraw
 
 <h2>How to do?</h2>
 1. Clone the project.
-  ```bash
+
+''' bash
     git clone https://github.com/DrageonLee/assignment-ATM.git
-    ```
 2. Start the file.
-  ```bash
-    python ATM.py
-    ```
+````bash
+python ATM.py
+````
