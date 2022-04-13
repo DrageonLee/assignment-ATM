@@ -1,6 +1,7 @@
 # assignment-ATM
 
 <h2> Requirements </h2>
+
 - At least the following flow should be implemented:
 Insert Card => PIN number => Select Account => See Balance/Deposit/Withdraw
 
@@ -13,3 +14,8 @@ Insert Card => PIN number => Select Account => See Balance/Deposit/Withdraw
 - You can simplify some complex real world problems if you think it's not worth illustrating in the project.
 
 <h2>What I did in this assignment</h2>
+
+1. Can add user account
+```python
+
+```
